@@ -1,0 +1,73 @@
+.modal-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	z-index: 111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/**/
+	width: 100vw;
+	height: 100vh;
+}
+
+.modal {
+	position: relative;
+	max-width: 300px;
+	font-size: 14px;
+	font-weight: 100;
+	border: 1px solid #444;
+	padding: 15px 15px;
+	border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+	.modal {
+		width: 80%;
+	}
+}
+
+/* themes */
+
+.dark_c {
+	background-color: #0a0a0a;
+}
+
+.dark {
+	background-color: #000000;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.light_c {
+	background-color: #dddada;
+}
+
+.light {
+	background-color: #c5c4c4;
+	border: 1px solid #9d9c9c;
+	color: #000000;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* progressBar */
+
+.progressBar {
+	position: absolute;
+	left: 0px;
+	top: 0;
+	width: 0%;
+	background-color: rgb(255, 255, 255);
+	height: 2px;
+
+	animation: progressAnim ease-out var(--modalProgressDuration) forwards;
+
+	border-radius: 90%;
+}
+
+@keyframes progressAnim {
+	100% {
+		width: 100%;
+	}
+}
